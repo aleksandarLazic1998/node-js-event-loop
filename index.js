@@ -29,6 +29,7 @@ This is the forth item in callstack #5
 This is a process in Promise Queue #2
 */
 
+/* 
 process.nextTick(() => {
 	console.log("This is a process 1 in NextTick Queue #1\n");
 });
@@ -60,7 +61,7 @@ Promise.resolve().then(() => {
 	console.log("This is a Promise 1 in Promise Queue #3\n");
 });
 
-/* Console:
+Console:
 This is a process 1 in NextTick Queue #1
 
 This is a process 1 in NextTick Queue #2
