@@ -22,7 +22,6 @@ To start timer queue you can use 2 methods:
     setTimeout(() => {
 	    console.log("This is a setTimeout \n");
     }, 1000);
-
 ```
 
 2. setInterval - This will call the callback function in time interval in loop in the time you specified.
@@ -31,5 +30,12 @@ To start timer queue you can use 2 methods:
     setInterval(() => {
 	    console.log("This is a setInterval \n");
     }, 1000);
+```
 
+## I/O Queue
+
+Most of the 'async' methods from build in modules are from I/O Queue
+
+```
+    fs.readFile()
 ```
