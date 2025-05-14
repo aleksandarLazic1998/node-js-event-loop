@@ -24,5 +24,11 @@ setImmediate(() => {
 Console:
 This is a process 1 in NextTick Queue #1
 
+This is a Promise 1 in Promise Queue #1
+
+This is a setTimeout #1
+
+This is a setImmediate #1
+
 File read #1
 */

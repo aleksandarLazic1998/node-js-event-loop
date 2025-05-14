@@ -42,10 +42,13 @@ Most of the 'async' methods from build in modules are from I/O Queue
 
 ## Check Queue
 
-Check queue is just straightforward it has method setImmediate that is dispatching after I/O Queue because of I/O polling
+Check queue is just straightforward it has method setImmediate that is dispatching sometimes before I/O Queue
 
 ```
 setImmediate(() => {
 	console.log("This is a setImmediate #1\n");
 });
 ```
+
+The logic why Check Queue will sometimes dispatch before I/O Queue is because of I/O polling.
+In the first iteration of code I/O queue is empty because of Node.js internals fs for this example needs to poll to check if the task is completed before calling the callback method.
