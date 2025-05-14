@@ -5,6 +5,10 @@ setTimeout(() => {
 
 setTimeout(() => {
 	console.log("This is a setTimeout 2\n");
+
+	process.nextTick(() => {
+		console.log("This is a inner process 1 in setTimeout #2\n");
+	});
 }, 0);
 
 setTimeout(() => {
@@ -64,6 +68,8 @@ This is a inner process 1 in Promise Queue #2
 This is a setTimeout 1
 
 This is a setTimeout 2
+
+This is a inner process 1 in setTimeout #2
 
 This is a setTimeout 3
 */
