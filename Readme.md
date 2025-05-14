@@ -8,3 +8,5 @@ MicroTask Queue has 2 built in queues inside of it:
 
 1. NextTick Queue
 2. Promise Queue
+
+The rule of MicroTask Queue is that first nextTick callbacks are executed first then the Promise callbacks
