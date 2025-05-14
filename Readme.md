@@ -10,4 +10,4 @@ MicroTask Queue has 2 built in queues inside of it:
 2. Promise Queue
 
 The rule of MicroTask Queue is that first nextTick callbacks are executed first then the Promise callbacks
-_The process.nextTick should be discouraged because it can cause Event Loop starvation._
+The _process.nextTick_ should be discouraged because it can cause Event Loop starvation.
