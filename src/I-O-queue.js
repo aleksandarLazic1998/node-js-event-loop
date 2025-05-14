@@ -4,16 +4,20 @@ Promise.resolve().then(() => {
 	console.log("This is a Promise 1 in Promise Queue #1\n");
 });
 
-setTimeout(() => {
-	console.log("This is a setTimeout #1\n");
-}, 0);
-
 fs.readFile(__filename, () => {
 	console.log("File read #1\n");
 });
 
 process.nextTick(() => {
 	console.log("This is a process 1 in NextTick Queue #1\n");
+});
+
+setTimeout(() => {
+	console.log("This is a setTimeout #1\n");
+}, 0);
+
+setImmediate(() => {
+	console.log("This is a setImmediate #1\n");
 });
 
 /*

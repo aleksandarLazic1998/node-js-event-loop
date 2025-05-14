@@ -39,3 +39,13 @@ Most of the 'async' methods from build in modules are from I/O Queue
 ```
     fs.readFile()
 ```
+
+## Check Queue
+
+Check queue is just straightforward it has method setImmediate that is dispatching after I/O Queue because of I/O polling
+
+```
+setImmediate(() => {
+	console.log("This is a setImmediate #1\n");
+});
+```
