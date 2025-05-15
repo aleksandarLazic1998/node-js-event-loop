@@ -6,6 +6,10 @@ Promise.resolve().then(() => {
 
 fs.readFile(__filename, () => {
 	console.log("File read #1\n");
+
+	setImmediate(() => {
+		console.log("This is a setImmediate in I/O callback #1\n");
+	});
 });
 
 process.nextTick(() => {
@@ -31,4 +35,6 @@ This is a setTimeout #1
 This is a setImmediate #1
 
 File read #1
+
+This is a setImmediate in I/O callback #1
 */
